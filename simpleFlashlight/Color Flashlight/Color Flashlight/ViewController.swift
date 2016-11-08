@@ -14,6 +14,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    @IBOutlet weak var myButton: UIButton!
+    
+    @IBAction func MyButtonClicked(_ sender: UIButton) {
+            if self.view.backgroundColor == UIColor.red {
+                self.view.backgroundColor = UIColor.blue
+            } else {
+                self.view.backgroundColor = UIColor.red
+            }
+
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

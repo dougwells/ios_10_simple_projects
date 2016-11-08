@@ -20,8 +20,24 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.91764712329999998" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FF-s6-ZgY">
+                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="MyButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D52-f2-XKF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6FF-s6-ZgY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jdH-uV-Gkb"/>
+                            <constraint firstItem="6FF-s6-ZgY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xgH-PV-hY6"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myButton" destination="6FF-s6-ZgY" id="RrR-xB-bYK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
