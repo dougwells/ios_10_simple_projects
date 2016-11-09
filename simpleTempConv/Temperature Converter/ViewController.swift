@@ -20,7 +20,17 @@ class ViewController: UIViewController {
     }
 
     @IBAction func convTempClicked(_ sender: Any) {
-        print("ConvTempClicked was clicked")
+        if let result = tempEntry.text {
+            if (tempEntry.text == "") {
+                return
+            } else {
+                if let num = Double(result) {
+                    let farh = num * (9/5) + 32
+                    tempFLabel.text = String(farh)
+                }
+            }
+        }
+        
     }
 
     
