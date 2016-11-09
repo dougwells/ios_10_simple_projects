@@ -9,10 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var count = 0
     @IBOutlet weak var tempEntry: UITextField!
 
     @IBOutlet weak var tempFLabel: UILabel!
 
+    @IBOutlet weak var countConversions: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,9 @@ class ViewController: UIViewController {
                 if let num = Double(result) {
                     let farh = num * (9/5) + 32
                     tempFLabel.text = String(farh)
+                    tempEntry.text = ""
+                    count += 1
+                    countConversions.text = "\(count) Conversions "
                 }
             }
         }
