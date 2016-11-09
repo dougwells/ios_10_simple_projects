@@ -9,11 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var tempEntry: UITextField!
 
+    @IBOutlet weak var tempFLabel: UILabel!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+
+    @IBAction func convTempClicked(_ sender: Any) {
+        print("ConvTempClicked was clicked")
+    }
+
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
