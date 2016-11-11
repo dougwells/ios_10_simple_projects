@@ -12,6 +12,7 @@
 		70A3B39E1DD4ABCB0030A5FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70A3B39C1DD4ABCB0030A5FF /* Main.storyboard */; };
 		70A3B3A01DD4ABCB0030A5FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70A3B39F1DD4ABCB0030A5FF /* Assets.xcassets */; };
 		70A3B3A31DD4ABCB0030A5FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70A3B3A11DD4ABCB0030A5FF /* LaunchScreen.storyboard */; };
+		70A3B3AB1DD547B80030A5FF /* StructsEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A3B3AA1DD547B80030A5FF /* StructsEnums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		70A3B39F1DD4ABCB0030A5FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70A3B3A21DD4ABCB0030A5FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70A3B3A41DD4ABCB0030A5FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70A3B3AA1DD547B80030A5FF /* StructsEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StructsEnums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				70A3B39F1DD4ABCB0030A5FF /* Assets.xcassets */,
 				70A3B3A11DD4ABCB0030A5FF /* LaunchScreen.storyboard */,
 				70A3B3A41DD4ABCB0030A5FF /* Info.plist */,
+				70A3B3AA1DD547B80030A5FF /* StructsEnums.swift */,
 			);
 			path = "Calc Jr";
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70A3B3AB1DD547B80030A5FF /* StructsEnums.swift in Sources */,
 				70A3B39B1DD4ABCB0030A5FF /* ViewController.swift in Sources */,
 				70A3B3991DD4ABCB0030A5FF /* AppDelegate.swift in Sources */,
 			);

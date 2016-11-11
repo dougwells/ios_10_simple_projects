@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var currentOperation: Operator = Operator.nothing
+    var calcState: CalculationState = CalculationState.enteringNum
 
     @IBOutlet weak var resultLabel: UILabel!
     
