@@ -16,7 +16,7 @@ class ViewController: UIViewController {
 
     @IBAction func calcAgeBtnTapped(_ sender: Any) {
         if (enterAge.text != "") {
-            let age = Double(enterAge.text!)! * 7
+            let age = Int(enterAge.text!)! * 7
             ansPrefixLabel.text = "In dog years, your dog is: "
             ansPostLabel.text = String(age)
         }
