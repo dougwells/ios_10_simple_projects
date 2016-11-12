@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     func updateDisplay (number: String) {
         if calcState == CalculationState.newNumStarted {
             if let num = resultLabel.text {
-                if num != ""{
+                if (num != "" && num != "+" && num != "-" && num != "*" && num != "/") {
                     firstValue = num
                 }
             }
@@ -42,7 +42,6 @@ class ViewController: UIViewController {
     
     @IBAction func operatorClicked (_ sender: UIButton) {
         calcState = CalculationState.newNumStarted
-        print(firstValue)
         if let num = resultLabel.text {
             if num != "" {
                 firstValue = num        //I think this line is not needed
@@ -53,12 +52,16 @@ class ViewController: UIViewController {
         switch sender.tag {
         case 10:
             currentOperation = Operator.add
+            resultLabel.text = "+"
         case 11:
             currentOperation = Operator.subtract
+            resultLabel.text = "-"
         case 12:
             currentOperation = Operator.times
+            resultLabel.text = "*"
         case 13:
             currentOperation = Operator.divide
+            resultLabel.text = "/"
         default:
             return
         }
@@ -77,12 +80,16 @@ class ViewController: UIViewController {
             
             if (currentOperation == Operator.times) {
                 result = String(Double(firstValue)! * Double(resultLabel.text!)!)
+                
             } else if (currentOperation == Operator.divide) {
                 result = String(Double(firstValue)! / Double(resultLabel.text!)!)
+                
             } else if (currentOperation == Operator.add) {
                 result = String(Double(firstValue)! + Double(resultLabel.text!)!)
+
             } else if (currentOperation == Operator.subtract) {
                 result = String(Double(firstValue)! - Double(resultLabel.text!)!)
+ 
             }
             resultLabel.text = result
             calcState = CalculationState.newNumStarted
