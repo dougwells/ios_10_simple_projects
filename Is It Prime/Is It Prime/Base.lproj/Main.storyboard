@@ -29,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RY9-Ys-Xn1">
-                                <rect key="frame" x="139" y="188" width="98" height="36"/>
+                                <rect key="frame" x="138.5" y="188" width="98" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Is it Prime?"/>
                                 <connections>
