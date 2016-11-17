@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var enterNum: UITextField!
     @IBOutlet weak var primeMessage: UILabel!
     var prime = false
+
     
     @IBAction func primeButtonTapped(_ sender: Any)  {
         if let num = Int(enterNum.text!)
