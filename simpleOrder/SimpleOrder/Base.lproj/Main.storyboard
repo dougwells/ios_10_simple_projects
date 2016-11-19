@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -35,16 +36,39 @@
                                     <constraint firstAttribute="width" constant="200" id="wPA-kf-LoR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.10588235294117647" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100 per hundred count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygd-Wy-UTB">
+                                <rect key="frame" x="60" y="204" width="200" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="b6J-MT-WnT"/>
+                                    <constraint firstAttribute="height" constant="25" id="e6G-sr-HhY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.10588235294117647" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbt-uM-LSx" userLabel="Divider">
+                                <rect key="frame" x="36" y="239" width="248" height="1"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="zdi-Hj-6aw"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="HlN-bE-MI8" firstAttribute="centerX" secondItem="Gue-cb-K9D" secondAttribute="centerX" id="1Pp-tG-6Pn"/>
+                            <constraint firstItem="zbt-uM-LSx" firstAttribute="centerX" secondItem="ygd-Wy-UTB" secondAttribute="centerX" id="26t-Sp-dfd"/>
                             <constraint firstItem="HlN-bE-MI8" firstAttribute="top" secondItem="Gue-cb-K9D" secondAttribute="bottom" constant="30" id="7Og-Zg-Q9X"/>
+                            <constraint firstItem="zbt-uM-LSx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="D0v-jU-oaJ"/>
                             <constraint firstItem="Gue-cb-K9D" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="Iur-vW-HYA"/>
                             <constraint firstItem="Gue-cb-K9D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ixr-sf-bKf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zbt-uM-LSx" secondAttribute="trailing" constant="20" id="N25-TH-aOp"/>
+                            <constraint firstItem="zbt-uM-LSx" firstAttribute="top" secondItem="ygd-Wy-UTB" secondAttribute="bottom" constant="10" id="NLq-IS-5ph"/>
+                            <constraint firstItem="ygd-Wy-UTB" firstAttribute="centerX" secondItem="HlN-bE-MI8" secondAttribute="centerX" id="aQl-XP-oBc"/>
+                            <constraint firstItem="ygd-Wy-UTB" firstAttribute="top" secondItem="HlN-bE-MI8" secondAttribute="bottom" constant="8" id="ubC-Tg-45V"/>
                         </constraints>
                     </view>
                 </viewController>
