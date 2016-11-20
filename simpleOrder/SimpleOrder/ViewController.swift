@@ -46,6 +46,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         statePicker.isHidden = true
         buyNow.isHidden = false
     }
+    //Buy Now
     @IBAction func buyNowPressed(_ sender: Any) {
     }
 
