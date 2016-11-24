@@ -26,7 +26,22 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func addNewToDoTapped(_ sender: Any) {
         
+        let itemsObject = UserDefaults.standard.object(forKey: "items")
+        
+        var items: [String]     //need, else get "unresolved var" error
+        
+        if let tempItems = itemsObject as? [String] {
+            items = tempItems
+            items.append(newToDo.text!)
+            
+        } else {
+             items = [newToDo.text!]
+        }
+        
+        UserDefaults.standard.set(items, forKey: "items")
+        
         newToDo.text = ""
+        self.view.endEditing(true)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
