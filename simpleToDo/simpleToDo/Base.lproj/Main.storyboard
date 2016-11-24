@@ -80,14 +80,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Add To Do" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="16" y="90" width="343" height="42"/>
+                                <rect key="frame" x="16" y="28" width="343" height="34.5"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                 <color key="textColor" red="0.11227373033761978" green="0.11230019479990005" blue="0.11227025836706161" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Example: Buy Milk" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4G3-j3-z5O">
-                                <rect key="frame" x="16" y="140" width="343" height="30"/>
+                                <rect key="frame" x="16" y="127.5" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -110,8 +110,8 @@
                             <constraint firstItem="zEq-FU-wV5" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="OzT-o2-Z8r"/>
                             <constraint firstItem="4G3-j3-z5O" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="Tft-aQ-QP3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4G3-j3-z5O" secondAttribute="trailing" id="ZFd-6W-VIL"/>
-                            <constraint firstItem="zEq-FU-wV5" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="70" id="n0h-m2-aOv"/>
-                            <constraint firstItem="4G3-j3-z5O" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" id="rnk-Qi-atn"/>
+                            <constraint firstItem="zEq-FU-wV5" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="8" id="n0h-m2-aOv"/>
+                            <constraint firstItem="4G3-j3-z5O" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="65" id="rnk-Qi-atn"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add To Do" image="second" id="cPa-gy-q4n"/>

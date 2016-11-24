@@ -27,6 +27,14 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            arr.remove(at: indexPath.row)
+            table.reloadData()
+            UserDefaults.standard.set(arr, forKey: "items")
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +49,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
         table.reloadData()
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
