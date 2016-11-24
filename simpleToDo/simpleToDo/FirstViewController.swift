@@ -10,6 +10,8 @@ import UIKit
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var table: UITableView!
+    
     var arr = ["Github push of day", "Buy Groceries", "Work Out"]
 
     
@@ -28,11 +30,16 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         let itemsObject = UserDefaults.standard.object(forKey: "items")
         
         if let tempItems = itemsObject as? [String] {
             arr = tempItems
         }
+        table.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
