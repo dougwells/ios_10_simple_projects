@@ -90,6 +90,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cityName" destination="ha0-Po-dk9" id="bvn-Xo-2vv"/>
                         <outlet property="wxMessage" destination="aSx-zL-HGC" id="eJr-nT-FOA"/>
                     </connections>
                 </viewController>

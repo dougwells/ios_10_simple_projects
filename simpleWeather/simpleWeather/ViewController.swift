@@ -10,15 +10,22 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var wxMessage: UILabel!
+    @IBOutlet weak var cityName: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func cityNameSubmitted(_ sender: Any) {
+        
         self.view.endEditing(true)
+
         wxMessage.text = "Loading your 3-Day Forecast ..."
-        getWeather(website: "http://www.weather-forecast.com/locations/San-Diego/forecasts/latest")
+        
+        let wxWebsite = "http://www.weather-forecast.com/locations/" + cityName.text! + "/forecasts/latest"
+            
+        getWeather(website: wxWebsite)
+        
         
     }
 
@@ -34,6 +41,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    func wxURL(town: NSString) -> String {
+        let arr:[String] = town.uppercased.components(separatedBy: " ")
+        
+        let dashCity = arr.joined(separator: "-")
+        
+        let finalURL: String = "http://www.weather-forecast.com/locations/" + dashCity + "/forecasts/latest"
+        
+        return finalURL
     }
     
     func getWeather (website:String) {
