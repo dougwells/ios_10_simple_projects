@@ -8,12 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
+    @IBOutlet weak var wxMessage: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(grabSourceCode(website: "http://www.weather-forecast.com/locations/San-Diego/forecasts/latest"))
-
+    }
+    
+    @IBAction func cityNameSubmitted(_ sender: Any) {
+        self.view.endEditing(true)
+        wxMessage.text = "Loading your 3-Day Forecast ..."
+        getWeather(website: "http://www.weather-forecast.com/locations/San-Diego/forecasts/latest")
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,8 +27,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func grabSourceCode (website:String) -> NSString {
-        var message: NSString = ""
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func getWeather (website:String) {
+        var weather: NSString = ""
         
         if let url = URL(string: website) {
             
@@ -31,20 +46,21 @@ class ViewController: UIViewController {
             let task = URLSession.shared.dataTask(with: request as URLRequest) { data, response, error in
                 
                 if error != nil {
-                    message = "No Joy. See Logs"
+                    weather = "No Joy. See error logs"
                     
                 } else {
                     if let unwrappedData = data {
                         let dataString = NSString(data: unwrappedData, encoding: String.Encoding.utf8.rawValue)
-                        message = (dataString!.components(separatedBy: "3 Day Weather Forecast ")[1].components(separatedBy: "<span class=\"phrase\">")[1].components(separatedBy: "</")[0] as NSString)
-                        print(message)
+                        weather = (dataString!.components(separatedBy: "3 Day Weather Forecast ")[1].components(separatedBy: "<span class=\"phrase\">")[1].components(separatedBy: "</")[0] as NSString)
+
                     }
                 }
+                print(weather)
+                self.wxMessage.text = String(weather)
             }
             
             task.resume()
         }
-        return message
     }
 
 
