@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vfns4l4u3oc-tim-marshall.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bPv-hv-5xe">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="surfWx.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bPv-hv-5xe">
                                 <rect key="frame" x="0.0" y="-5" width="375" height="672"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -100,6 +100,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="vfns4l4u3oc-tim-marshall.jpg" width="5184" height="3456"/>
+        <image name="surfWx.jpg" width="1000" height="667"/>
     </resources>
 </document>

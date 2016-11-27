@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		702E24321DEB98F5008C31E4 /* surfWx.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 702E24311DEB98F5008C31E4 /* surfWx.jpg */; };
 		704F2FDF1DEB194D00280783 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704F2FDE1DEB194D00280783 /* AppDelegate.swift */; };
 		704F2FE11DEB194D00280783 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704F2FE01DEB194D00280783 /* ViewController.swift */; };
 		704F2FE41DEB194D00280783 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 704F2FE21DEB194D00280783 /* Main.storyboard */; };
 		704F2FE61DEB194D00280783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 704F2FE51DEB194D00280783 /* Assets.xcassets */; };
 		704F2FE91DEB194D00280783 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 704F2FE71DEB194D00280783 /* LaunchScreen.storyboard */; };
-		704F2FFD1DEB225200280783 /* vfns4l4u3oc-tim-marshall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 704F2FFC1DEB225200280783 /* vfns4l4u3oc-tim-marshall.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		702E24311DEB98F5008C31E4 /* surfWx.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = surfWx.jpg; path = ../../../../../../../../Downloads/surfWx.jpg; sourceTree = "<group>"; };
 		704F2FDB1DEB194D00280783 /* simpleWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		704F2FDE1DEB194D00280783 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		704F2FE01DEB194D00280783 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,7 +24,6 @@
 		704F2FE51DEB194D00280783 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		704F2FE81DEB194D00280783 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		704F2FEA1DEB194D00280783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		704F2FFC1DEB225200280783 /* vfns4l4u3oc-tim-marshall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "vfns4l4u3oc-tim-marshall.jpg"; path = "../../../../../../../../Downloads/vfns4l4u3oc-tim-marshall.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				704F2FDE1DEB194D00280783 /* AppDelegate.swift */,
-				704F2FFC1DEB225200280783 /* vfns4l4u3oc-tim-marshall.jpg */,
+				702E24311DEB98F5008C31E4 /* surfWx.jpg */,
 				704F2FE01DEB194D00280783 /* ViewController.swift */,
 				704F2FE21DEB194D00280783 /* Main.storyboard */,
 				704F2FE51DEB194D00280783 /* Assets.xcassets */,
@@ -129,8 +129,8 @@
 			files = (
 				704F2FE91DEB194D00280783 /* LaunchScreen.storyboard in Resources */,
 				704F2FE61DEB194D00280783 /* Assets.xcassets in Resources */,
+				702E24321DEB98F5008C31E4 /* surfWx.jpg in Resources */,
 				704F2FE41DEB194D00280783 /* Main.storyboard in Resources */,
-				704F2FFD1DEB225200280783 /* vfns4l4u3oc-tim-marshall.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +304,7 @@
 				704F2FEF1DEB194D00280783 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
