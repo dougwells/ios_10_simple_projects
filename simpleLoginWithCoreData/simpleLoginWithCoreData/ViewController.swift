@@ -11,10 +11,23 @@ import CoreData
 
 class ViewController: UIViewController {
 
+    let isUserLoggedIn = false
+    @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var inputUserName: UITextField!
+    
+    @IBAction func login(_ sender: Any) {
+        if let newUsername = inputUserName.text as String? {
+            self.welcomeLabel.text = "Welcome: \(newUsername)"
+        }
+    }
+
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let isUserLoggedIn = false
+
         
         //Set up storage context
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -22,6 +35,10 @@ class ViewController: UIViewController {
         
         //create object "newUser" that lets us save new data
         let newUser = NSEntityDescription.insertNewObject(forEntityName: "Users", into: context)
+        
+        if !self.isUserLoggedIn {
+            
+        }
         
         
 
