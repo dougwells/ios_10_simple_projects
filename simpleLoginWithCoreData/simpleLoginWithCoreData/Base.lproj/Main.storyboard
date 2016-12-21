@@ -34,7 +34,7 @@
                                     <action selector="inputUserName:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="QvC-Zl-IVP"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome: new user" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vz-uD-pfO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Login" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vz-uD-pfO">
                                 <rect key="frame" x="27.5" y="195" width="320" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="8DN-9T-7u2"/>

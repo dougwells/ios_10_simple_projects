@@ -14,24 +14,16 @@ class ViewController: UIViewController {
     var existingUser = false
     var isUserLoggedIn = false
     var username = ""
+    
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var inputUserName: UITextField!
     
     @IBAction func login(_ sender: Any) {
         if let newUsername = inputUserName.text as String? {
-            self.welcomeLabel.text = "Welcome: \(newUsername)"
-            self.inputUserName.text = ""
             username = newUsername
+            inputUserName.text = ""
+            print("username: ", username)
         }
-    }
-
-
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-
         
         //Set up storage context
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -39,10 +31,35 @@ class ViewController: UIViewController {
         
         //create object "newUser" that lets us save new data
         let newUser = NSEntityDescription.insertNewObject(forEntityName: "Users", into: context)
+        
+        //Check to see if this user already exists
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
+        
+        request.returnsObjectsAsFaults = false
+        
+        do {
+            
+            let results = try context.fetch(request)
+            print("Existing DB objects = ", results.count)
+            
+            if (results.count > 0) {
+                
+                //loop thru array of result objects to see if username exists already
+                for result in results as! [NSManagedObject] {
+                    if let existingUsername = result.value(forKey: "username") as? String {
+                        print("is \(username) = \(existingUsername)?")
+                        if username == existingUsername {
+                            existingUser = true
+                        }
+                    }
+                }
+            }
+        } catch {
+            print("Error retrieving user data")
+        } //End check to see if existing user
+        
 
-        print("Pre. existingUser = ", existingUser)
-        checkIfExistingUser(context: context)
-        print("Post. existingUser = ", existingUser)
+        
         
         //save username
         if !existingUser {
@@ -57,6 +74,17 @@ class ViewController: UIViewController {
         } else {
             self.welcomeLabel.text = "Welcome Back, \(username) !"
         }
+    }
+
+
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+
+        
+
         
 
         
@@ -70,30 +98,7 @@ class ViewController: UIViewController {
     }
     
     func checkIfExistingUser(context: NSManagedObjectContext){
-        //Check to see if this user already exists
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
         
-        request.returnsObjectsAsFaults = false
-        
-        do {
-            
-            let results = try context.fetch(request)
-            
-            if (results.count > 0) {
-                
-                //loop thru array of result objects to see if username exists already
-                for result in results as! [NSManagedObject] {
-                    if let existingUsername = result.value(forKey: "username") as? String {
-                        
-                        if username == existingUsername {
-                            existingUser = true
-                        }
-                    }
-                }
-            }
-        } catch {
-            print("Error retrieving user data")
-        }
     }
 
 
