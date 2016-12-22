@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input desired username (ex: Doug)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B8c-Wk-rAn">
-                                <rect key="frame" x="27.5" y="250" width="320" height="30"/>
+                                <rect key="frame" x="27.5" y="260" width="320" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="X5f-hv-RrD"/>
                                     <constraint firstAttribute="width" constant="320" id="bA1-IX-y2Y"/>
@@ -35,17 +35,17 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Login" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vz-uD-pfO">
-                                <rect key="frame" x="27.5" y="195" width="320" height="35"/>
+                                <rect key="frame" x="27.5" y="170" width="320" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="8DN-9T-7u2"/>
-                                    <constraint firstAttribute="height" constant="35" id="VDO-e7-2VV"/>
+                                    <constraint firstAttribute="height" constant="70" id="VDO-e7-2VV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6G-Sm-PJK">
-                                <rect key="frame" x="144.5" y="315" width="85" height="40"/>
+                                <rect key="frame" x="144.5" y="325" width="85" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="Ie2-zZ-i5U"/>
                                     <constraint firstAttribute="height" constant="40" id="c20-Ye-Uai"/>
@@ -61,7 +61,7 @@
                         <constraints>
                             <constraint firstItem="4vz-uD-pfO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Ja-hC-1cJ"/>
                             <constraint firstItem="B8c-Wk-rAn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SyN-YT-FWC"/>
-                            <constraint firstItem="4vz-uD-pfO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="175" id="bPx-2Y-VYl"/>
+                            <constraint firstItem="4vz-uD-pfO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="bPx-2Y-VYl"/>
                             <constraint firstItem="o6G-Sm-PJK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eGj-96-4gc"/>
                             <constraint firstItem="B8c-Wk-rAn" firstAttribute="top" secondItem="4vz-uD-pfO" secondAttribute="bottom" constant="20" id="ldm-ZH-K2k"/>
                             <constraint firstItem="o6G-Sm-PJK" firstAttribute="top" secondItem="B8c-Wk-rAn" secondAttribute="bottom" constant="35" id="muG-fh-A7J"/>

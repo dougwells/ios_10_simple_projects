@@ -11,7 +11,7 @@ import CoreData
 
 class ViewController: UIViewController {
 
-    var existingUser = false
+    
     var isUserLoggedIn = false
     var username = ""
     
@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var inputUserName: UITextField!
     
     @IBAction func login(_ sender: Any) {
+        var existingUser = false
         if let newUsername = inputUserName.text as String? {
             username = newUsername
             inputUserName.text = ""
