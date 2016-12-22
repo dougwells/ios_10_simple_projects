@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     @IBAction func login(_ sender: Any) {
         var existingUser = false
-        if let newUsername = inputUserName.text as String? {
+        if let newUsername = inputUserName.text as? String! {
             username = newUsername
             inputUserName.text = ""
             print("username: ", username)
