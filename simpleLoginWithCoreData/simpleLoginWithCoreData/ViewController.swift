@@ -12,15 +12,42 @@ import CoreData
 class ViewController: UIViewController {
 
     
+    @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var inputUserName: UITextField!
+    @IBOutlet weak var loginLabel: UIButton!
+
+    
     var isUserLoggedIn = false
     var username = ""
     
-    @IBOutlet weak var welcomeLabel: UILabel!
-    @IBOutlet weak var inputUserName: UITextField!
+    @IBAction func logout(_ sender: Any) {
+        welcomeLabel.text = "Please Login"
+        inputUserName.alpha = 1
+        loginLabel.setTitle("Login", for: .normal)
+        isUserLoggedIn = false
+    }
+    
+    /*
+        Could also modify existing username instead of simply adding new one.
+    */
+    
     
     @IBAction func login(_ sender: Any) {
         var existingUser = false
-        if let newUsername = inputUserName.text as? String! {
+        inputUserName.alpha = 0
+        
+        if isUserLoggedIn {
+            welcomeLabel.text = "Enter new username"
+            inputUserName.alpha = 1
+            loginLabel.setTitle("Login", for: .normal)
+            isUserLoggedIn = false
+            return
+            
+        } else {
+            loginLabel.setTitle("Change name", for: .normal)
+            isUserLoggedIn = true
+        }
+        if let newUsername = inputUserName.text {
             username = newUsername
             inputUserName.text = ""
             print("username: ", username)
