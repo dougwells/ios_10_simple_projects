@@ -20,11 +20,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         self.view.endEditing(true)
 
-        wxMessage.text = "Loading your 3-Day Forecast ..."
+        wxMessage.text = "Loading your weather Forecast ..."
         
         let wxWebsite = "http://www.weather-forecast.com/locations/" + cityName.text! + "/forecasts/latest"
+        
+        let wxAPI = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName.text! + "&appid=094c7cfda5c9b5993192ea76c73f8d41"
             
-        getWeather(website: wxWebsite)
+        // getWeather(website: wxWebsite)
+        // getWxFromAPI(API: wxAPI)
         
         
     }
@@ -78,6 +81,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             task.resume()
         }
+        
+    } //end getWeather function
+    
+    func getWxFromAPI(api: String) {
+        
     }
 
 
