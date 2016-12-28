@@ -27,7 +27,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let wxAPI = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName.text! + "&appid=094c7cfda5c9b5993192ea76c73f8d41"
             
         // getWeather(website: wxWebsite)
-        // getWxFromAPI(API: wxAPI)
+        getWxFromAPI(api: wxAPI)
         
         
     }
@@ -85,7 +85,35 @@ class ViewController: UIViewController, UITextFieldDelegate {
     } //end getWeather function
     
     func getWxFromAPI(api: String) {
+        let url = URL(string: api)
         
+        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            
+            if error != nil {
+                print(error)
+                
+            }else {
+                if let urlContent = data {
+                    
+                    do {
+                        
+                        let jsonResult = try JSONSerialization.jsonObject(with: urlContent, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
+                        
+                        print("City name = ", jsonResult["name"]) as? String
+                        
+                        if let description = ((jsonResult["weather"] as? NSArray)?[0] as? NSDictionary)?["description"] as? String {
+                            print("WX description = ", description)
+                        }
+                        
+                        print(jsonResult)
+                        
+                    } catch {
+                        print("JSON Serialization failed")
+                    }
+                }
+            }
+        }
+        task.resume()
     }
 
 
