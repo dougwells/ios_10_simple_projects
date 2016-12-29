@@ -19,12 +19,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func cityNameSubmitted(_ sender: Any) {
         
         self.view.endEditing(true)
-
+        let dashCity = cityName.text!.replacingOccurrences(of: " ", with: "-")
         wxMessage.text = "Loading your weather Forecast ..."
         
-        let wxWebsite = "http://www.weather-forecast.com/locations/" + cityName.text! + "/forecasts/latest"
+        let wxWebsite = "http://www.weather-forecast.com/locations/" + dashCity + "/forecasts/latest"
         
-        let wxAPI = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName.text! + "&appid=094c7cfda5c9b5993192ea76c73f8d41"
+        let wxAPI = "http://api.openweathermap.org/data/2.5/weather?q=" + dashCity + "&appid=094c7cfda5c9b5993192ea76c73f8d41"
             
         // getWeather(website: wxWebsite)
         getWxFromAPI(api: wxAPI)
@@ -46,15 +46,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    func wxURL(town: NSString) -> String {
+    /* func wxURL(town: NSString) -> String {
         let arr:[String] = town.uppercased.components(separatedBy: " ")
         
-        let dashCity = arr.joined(separator: "-")
+        dashCity = arr.joined(separator: "-")
+        print("dashCity = ", dashCity)
         
-        let finalURL: String = "http://www.weather-forecast.com/locations/" + dashCity + "/forecasts/latest"
-        
-        return finalURL
+        return dashCity
     }
+    */
     
     func getWeather (website:String) {
         var weather: NSString = ""
@@ -71,7 +71,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 } else {
                     if let unwrappedData = data {
                         let dataString = NSString(data: unwrappedData, encoding: String.Encoding.utf8.rawValue)
-                        weather = (dataString!.components(separatedBy: "3 Day Weather Forecast ")[1].components(separatedBy: "<span class=\"phrase\">")[1].components(separatedBy: "</")[0] as NSString)
+                        weather = (dataString!.components(separatedBy: "3 Day Weather Forecast: ")[1].components(separatedBy: "<span class=\"phrase\">")[1].components(separatedBy: "</")[0] as NSString)
 
                     }
                 }
@@ -85,12 +85,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     } //end getWeather function
     
     func getWxFromAPI(api: String) {
+        
         let url = URL(string: api)
         
         let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             
             if error != nil {
-                print(error)
+                print(error as Any)
                 
             }else {
                 if let urlContent = data {
@@ -103,6 +104,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                         
                         if let description = ((jsonResult["weather"] as? NSArray)?[0] as? NSDictionary)?["description"] as? String {
                             print("WX description = ", description)
+                            self.wxMessage.text = "Today's Forecast: " + description
                         }
                         
                         print(jsonResult)
