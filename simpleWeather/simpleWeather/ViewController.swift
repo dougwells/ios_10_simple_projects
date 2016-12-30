@@ -19,7 +19,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func cityNameSubmitted(_ sender: Any) {
         
         self.view.endEditing(true)
-        let dashCity = cityName.text!.replacingOccurrences(of: " ", with: "-")
+        let dashCity = cityName.text!.replacingOccurrences(of: " ", with: "%20")
         wxMessage.text = "Loading your weather Forecast ..."
         
         let wxWebsite = "http://www.weather-forecast.com/locations/" + dashCity + "/forecasts/latest"
@@ -100,11 +100,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
                         
                         let jsonResult = try JSONSerialization.jsonObject(with: urlContent, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
                         
-                        print("City name = ", jsonResult["name"]) as? String
+                        print("City name = ", jsonResult["name"])
                         
                         if let description = ((jsonResult["weather"] as? NSArray)?[0] as? NSDictionary)?["description"] as? String {
-                            print("WX description = ", description)
-                            self.wxMessage.text = "Today's Forecast: " + description
+                            
+                            DispatchQueue.main.sync {
+                                print("WX description = ", description)
+                                self.wxMessage.text = "Today's Forecast: " + description
+                            }
+
                         }
                         
                         print(jsonResult)
