@@ -80,15 +80,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
             
             task.resume()
+        } else {
+            print("Unable to get weather for that city, please try another city")
         }
         
     } //end getWeather function
     
     func getWxFromAPI(api: String) {
         
-        let url = URL(string: api)
+        if let url = URL(string: api) {
         
-        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             
             if error != nil {
                 print(error as Any)
@@ -120,7 +122,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
         }
         task.resume()
-    }
+        } else {
+            print("Cannot get weather for that city, please try another")
+            wxMessage.text = "Cannot get weather for that city, please try another"
+        }
+
+    } //End function getWXFromAPI
 
 
 }
