@@ -58,6 +58,9 @@
                             <constraint firstItem="gpl-PY-UnT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="z8j-dT-UgS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="dGD-7f-c69" id="Bm9-oy-LnV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
