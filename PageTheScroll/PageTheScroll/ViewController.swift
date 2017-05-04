@@ -41,7 +41,7 @@ class ViewController: UIViewController {
             contentWidth += newX
             
             scrollView.addSubview(imageView)
-            imageView.frame = CGRect(x: newX - 75, y: scrollView.frame.midY - 75, width: 150, height: 150)
+            imageView.frame = CGRect(x: newX - 75, y: scrollView.frame.midY - 75, width: 200, height: 200)
         }
         scrollView.contentSize = CGSize(width: contentWidth, height: view.frame.size.height)
         
