@@ -17,10 +17,17 @@
                         <table alignment="left" id="kiI-Jm-n0b">
                             <items>
                                 <tableRow id="gVw-rp-P89">
-                                    <group key="rootItem" width="1" alignment="left" id="RNK-AP-HRG"/>
+                                    <group key="rootItem" width="1" alignment="left" id="RNK-AP-HRG">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Label" id="Ex4-mi-Zu8"/>
+                                        </items>
+                                    </group>
                                 </tableRow>
                             </items>
                         </table>
+                        <button width="1" alignment="left" title="Add New Note" id="WWV-6E-ODJ">
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </button>
                     </items>
                 </controller>
             </objects>
