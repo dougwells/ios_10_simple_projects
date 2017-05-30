@@ -11,11 +11,14 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
+    
+    @IBOutlet var table: WKInterfaceTable!
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
         // Configure interface objects here.
+        table.setNumberOfRows(10, withRowType: "Row")
     }
     
     override func willActivate() {
@@ -28,4 +31,6 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    @IBAction func addNewNote() {
+    }
 }

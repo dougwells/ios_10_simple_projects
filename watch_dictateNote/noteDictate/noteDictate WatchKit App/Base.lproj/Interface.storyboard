@@ -30,8 +30,14 @@
                         </table>
                         <button width="1" alignment="left" title="Add New Note" id="WWV-6E-ODJ">
                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="addNewNote" destination="AgC-eL-Hgc" id="518-ST-anh"/>
+                            </connections>
                         </button>
                     </items>
+                    <connections>
+                        <outlet property="table" destination="kiI-Jm-n0b" id="kOW-V4-o4p"/>
+                    </connections>
                 </controller>
             </objects>
         </scene>
