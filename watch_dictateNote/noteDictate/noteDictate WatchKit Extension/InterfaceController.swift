@@ -19,6 +19,11 @@ class InterfaceController: WKInterfaceController {
         
         // Configure interface objects here.
         table.setNumberOfRows(10, withRowType: "Row")
+        
+        for rowIndex in 0..<10 {
+            guard let row = table.rowController(at: rowIndex) as? NoteSelectRow else { continue}
+            row.textLabel.setText("Hello, row #\(rowIndex)")
+        }
     }
     
     override func willActivate() {
