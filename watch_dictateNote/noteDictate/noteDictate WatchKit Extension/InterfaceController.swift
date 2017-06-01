@@ -43,5 +43,12 @@ class InterfaceController: WKInterfaceController {
     }
 
     @IBAction func addNewNote() {
+        
+        //request user input
+        presentTextInputController(withSuggestions: nil, allowedInputMode: .plain) { [unowned: self] result in
+            
+        }
+        
+        
     }
 }
