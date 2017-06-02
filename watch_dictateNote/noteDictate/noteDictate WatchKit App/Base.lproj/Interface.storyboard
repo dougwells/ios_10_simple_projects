@@ -16,12 +16,15 @@
                     <items>
                         <table alignment="left" id="kiI-Jm-n0b">
                             <items>
-                                <tableRow id="gVw-rp-P89">
+                                <tableRow identifier="Row" id="gVw-rp-P89" customClass="NoteSelectRow" customModule="noteDictate_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="RNK-AP-HRG">
                                         <items>
                                             <label alignment="left" verticalAlignment="center" text="Label" id="Ex4-mi-Zu8"/>
                                         </items>
                                     </group>
+                                    <connections>
+                                        <outlet property="textLabel" destination="Ex4-mi-Zu8" id="jz8-y7-mSu"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>

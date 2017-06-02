@@ -19,6 +19,7 @@
 		7033DFE51EDD14BB0057B495 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7033DFE41EDD14BB0057B495 /* InterfaceController.swift */; };
 		7033DFE71EDD14BB0057B495 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7033DFE61EDD14BB0057B495 /* ExtensionDelegate.swift */; };
 		7033DFE91EDD14BB0057B495 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7033DFE81EDD14BB0057B495 /* Assets.xcassets */; };
+		7033DFFB1EDD1C480057B495 /* NoteSelectRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7033DFFA1EDD1C480057B495 /* NoteSelectRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		7033DFE61EDD14BB0057B495 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		7033DFE81EDD14BB0057B495 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7033DFEA1EDD14BB0057B495 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7033DFFA1EDD1C480057B495 /* NoteSelectRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteSelectRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		7033DFE31EDD14BB0057B495 /* noteDictate WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				7033DFFA1EDD1C480057B495 /* NoteSelectRow.swift */,
 				7033DFE41EDD14BB0057B495 /* InterfaceController.swift */,
 				7033DFE61EDD14BB0057B495 /* ExtensionDelegate.swift */,
 				7033DFE81EDD14BB0057B495 /* Assets.xcassets */,
@@ -301,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7033DFFB1EDD1C480057B495 /* NoteSelectRow.swift in Sources */,
 				7033DFE71EDD14BB0057B495 /* ExtensionDelegate.swift in Sources */,
 				7033DFE51EDD14BB0057B495 /* InterfaceController.swift in Sources */,
 			);
@@ -559,6 +563,7 @@
 				7033DFEF1EDD14BB0057B495 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7033DFF11EDD14BB0057B495 /* Build configuration list for PBXNativeTarget "noteDictate WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -567,6 +572,7 @@
 				7033DFF31EDD14BB0057B495 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7033DFF51EDD14BB0057B495 /* Build configuration list for PBXNativeTarget "noteDictate" */ = {
 			isa = XCConfigurationList;
@@ -575,6 +581,7 @@
 				7033DFF71EDD14BB0057B495 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
