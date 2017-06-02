@@ -47,6 +47,11 @@ class InterfaceController: WKInterfaceController {
         //request user input
         presentTextInputController(withSuggestions: nil, allowedInputMode: .plain) { [unowned: self] result in
             
+            //convert to string if possible, else return out of function
+            guard let result = result?.first as? String else {return}
+            
+            //
+            
         }
         
         
