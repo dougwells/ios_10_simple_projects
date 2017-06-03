@@ -45,13 +45,13 @@ class InterfaceController: WKInterfaceController {
     @IBAction func addNewNote() {
         
         //request user input
-        presentTextInputController(withSuggestions: nil, allowedInputMode: .plain) { [unowned: self] result in
+        presentTextInputController(withSuggestions: nil, allowedInputMode: .plain) { [unowned self] result in
             
             //convert to string if possible, else return out of function
             guard let result = result?.first as? String else {return}
             
-            //
-            
+            //insert new row at end of table
+            self.table.insertRows(at: IndexSet(integer: self.notes.count), withRowType: "Row")
         }
         
         
