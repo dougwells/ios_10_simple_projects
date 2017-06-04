@@ -52,6 +52,9 @@ class InterfaceController: WKInterfaceController {
             
             //insert new row at end of table
             self.table.insertRows(at: IndexSet(integer: self.notes.count), withRowType: "Row")
+            
+            //feed new row the new text
+            self.set(row: self.notes.count, to: result)
         }
         
         
