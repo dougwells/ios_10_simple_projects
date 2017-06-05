@@ -55,6 +55,9 @@ class InterfaceController: WKInterfaceController {
             
             //feed new row the new text
             self.set(row: self.notes.count, to: result)
+            
+            //append new note to the notes array
+            self.notes.append(result)
         }
         
         
