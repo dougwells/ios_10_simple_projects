@@ -58,6 +58,8 @@ class InterfaceController: WKInterfaceController {
             
             //append new note to the notes array
             self.notes.append(result)
+            
+            //push code to watch
         }
         
         
