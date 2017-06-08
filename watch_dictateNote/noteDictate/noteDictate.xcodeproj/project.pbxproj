@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		702490691EEA09D8008604D1 /* DetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702490681EEA09D8008604D1 /* DetailInterfaceController.swift */; };
 		7033DFC21EDD14BA0057B495 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7033DFC11EDD14BA0057B495 /* AppDelegate.swift */; };
 		7033DFC41EDD14BA0057B495 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7033DFC31EDD14BA0057B495 /* ViewController.swift */; };
 		7033DFC71EDD14BA0057B495 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7033DFC51EDD14BA0057B495 /* Main.storyboard */; };
@@ -65,6 +66,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		702490681EEA09D8008604D1 /* DetailInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInterfaceController.swift; sourceTree = "<group>"; };
 		7033DFBE1EDD14BA0057B495 /* noteDictate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = noteDictate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7033DFC11EDD14BA0057B495 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7033DFC31EDD14BA0057B495 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		7033DFE31EDD14BB0057B495 /* noteDictate WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				702490681EEA09D8008604D1 /* DetailInterfaceController.swift */,
 				7033DFFA1EDD1C480057B495 /* NoteSelectRow.swift */,
 				7033DFE41EDD14BB0057B495 /* InterfaceController.swift */,
 				7033DFE61EDD14BB0057B495 /* ExtensionDelegate.swift */,
@@ -306,6 +309,7 @@
 			files = (
 				7033DFFB1EDD1C480057B495 /* NoteSelectRow.swift in Sources */,
 				7033DFE71EDD14BB0057B495 /* ExtensionDelegate.swift in Sources */,
+				702490691EEA09D8008604D1 /* DetailInterfaceController.swift in Sources */,
 				7033DFE51EDD14BB0057B495 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

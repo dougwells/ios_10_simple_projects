@@ -24,6 +24,7 @@
                                     </group>
                                     <connections>
                                         <outlet property="textLabel" destination="Ex4-mi-Zu8" id="jz8-y7-mSu"/>
+                                        <segue destination="KfQ-13-SL7" kind="push" id="8gk-rO-dpi"/>
                                     </connections>
                                 </tableRow>
                             </items>
@@ -41,6 +42,20 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="-43" y="71"/>
+        </scene>
+        <!--Detail Interface Controller-->
+        <scene sceneID="8Fv-6n-A79">
+            <objects>
+                <controller id="KfQ-13-SL7" customClass="DetailInterfaceController" customModule="noteDictate_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Label" numberOfLines="0" id="wc2-M5-ZZz"/>
+                    </items>
+                    <connections>
+                        <outlet property="textLabel" destination="wc2-M5-ZZz" id="L1B-Oo-U95"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="255" y="74"/>
         </scene>
     </scenes>
 </document>

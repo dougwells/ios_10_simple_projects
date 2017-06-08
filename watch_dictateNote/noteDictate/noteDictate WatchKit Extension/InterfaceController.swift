@@ -59,10 +59,13 @@ class InterfaceController: WKInterfaceController {
             //append new note to the notes array
             self.notes.append(result)
             
-            //push code to watch
-            //Test on watch
         }
+    }
+    
+    override func contextForSegue(withIdentifier segueIdentifier: String, in table: WKInterfaceTable, rowIndex: Int) -> Any? {
         
+        return ["index" : String(rowIndex+1), "note" : notes[rowIndex]]
         
     }
+    
 }
