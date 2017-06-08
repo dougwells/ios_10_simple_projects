@@ -60,6 +60,7 @@ class InterfaceController: WKInterfaceController {
             self.notes.append(result)
             
             //push code to watch
+            //Test on watch
         }
         
         
