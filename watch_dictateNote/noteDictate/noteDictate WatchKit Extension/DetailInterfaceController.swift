@@ -18,7 +18,14 @@ class DetailInterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Configure interface objects here.
+        if let contextDictionary = context as? [String: String] {
+            
+            textLabel.setText(contextDictionary["note"] ?? "1")
+            
+            let index = contextDictionary["index"] ?? "1"
+            setTitle("Note \(index)")
+            
+        }
     }
 
     override func willActivate() {
