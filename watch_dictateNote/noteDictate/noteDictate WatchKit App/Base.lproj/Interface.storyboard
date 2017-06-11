@@ -14,7 +14,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="noteDictate_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <table alignment="left" id="kiI-Jm-n0b">
+                        <table alignment="left" pagingScroll="YES" id="kiI-Jm-n0b">
                             <items>
                                 <tableRow identifier="Row" id="gVw-rp-P89" customClass="NoteSelectRow" customModule="noteDictate_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="RNK-AP-HRG">
