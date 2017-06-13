@@ -19,6 +19,8 @@ class InterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
+        notes = NSKeyedUnarchiver.unarchiveObject(withFile: savePath) as? [String] ?? [String]()
+        
         // Configure interface objects here.
         table.setNumberOfRows(notes.count, withRowType: "Row")
         
@@ -59,6 +61,8 @@ class InterfaceController: WKInterfaceController {
             
             //append new note to the notes array
             self.notes.append(result)
+            
+            NSKeyedArchiver.archiveRootObject(self.notes, toFile: self.savePath)
             
         }
     }
